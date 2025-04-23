@@ -1,0 +1,43 @@
+table {
+    align-self: start;
+    border-collapse: collapse;
+    border-spacing: 0;
+    float: left;
+    font-family: monospace;
+    text-align: left;
+}
+
+caption {
+    line-height: 40px;
+    white-space: nowrap;
+    width: max-content;
+}
+
+/* Sangria de las celdas */
+th, td {
+    line-height: 40px;
+    padding-inline: 5px;
+}
+
+/* Cebreado */
+thead tr,
+tr:nth-child(even) {
+    background-color: var(--surface);
+}
+
+/* Linea gruesa que separa la cabecera del cuerpo */
+tr:last-child th {
+    border-bottom: 3px solid grey;
+}
+
+/* Linea gruesa que separa la primera columna del resto */
+tr:last-child th:first-child,
+tbody td:first-child {
+    border-right: 3px solid grey;
+    white-space: nowrap;
+}
+
+/* Linea que separa el columna del pie */
+tfoot tr:first-child {
+    border-top: 2px solid grey;
+}

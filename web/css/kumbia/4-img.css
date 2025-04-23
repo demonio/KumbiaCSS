@@ -1,0 +1,83 @@
+/* ───────── Light ───────── */
+[data-theme="light"]
+:where(
+    a[data-color],
+    button[data-color],
+    div:has([type=range]),
+    [for*="tab-"],
+    label:has(
+        :is(
+            textarea,
+            select,
+            input:not(
+                [type="button"],
+                [type="reset"],
+                [type="submit"],
+                [type="checkbox"],
+                [type="radio"],
+                [type="range"]
+            )
+        )
+    ),
+    li
+)
+:is(img[src*="icons/md"], svg) {
+    filter: invert(1);
+}
+
+/* ───────── Dark ───────── */
+[data-theme="dark"]
+:where(
+    a:not([data-color]),
+    button:not([data-color]),
+    div:has([type=range]),
+    [for*="tab-"],
+    label:has(
+        :is(
+            textarea,
+            select,
+            input:not(
+                [type="button"],
+                [type="reset"],
+                [type="submit"],
+                [type="checkbox"],
+                [type="radio"],
+                [type="range"]
+            )
+        )
+    ),
+    li
+)
+:is(img[src*="icons/md"], svg) {
+    filter: invert(1);
+}
+
+/* ───────── Controles deshabilitados ───────── */
+[data-theme="light"]
+:is(
+    button:not([type]),
+    [role="button"],
+    [type="button"],
+    [type="reset"],
+    [type="submit"]
+)[disabled] :is(img, svg) {
+    filter: opacity(0.3);
+}
+
+[data-theme="dark"]
+:is(
+    button:not([type]),
+    [role="button"],
+    [type="button"],
+    [type="reset"],
+    [type="submit"]
+)[disabled] :is(img, svg) {
+    filter: invert(1) opacity(0.3);
+}
+
+/* ───────── Utilidades ───────── */
+div > img { align-self: start; }
+
+img { max-width: 100%; }
+
+img:not([src*=".svg"]) { object-fit: cover; }

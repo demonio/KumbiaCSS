@@ -1,0 +1,53 @@
+<style>
+label:has([name*="carousel-"])~img {
+    display: none;
+}
+
+label:nth-of-type(1):has([name*="carousel-"]:checked)~img:nth-of-type(1),
+label:nth-of-type(2):has([name*="carousel-"]:checked)~img:nth-of-type(2),
+label:nth-of-type(3):has([name*="carousel-"]:checked)~img:nth-of-type(3),
+label:nth-of-type(4):has([name*="carousel-"]:checked)~img:nth-of-type(4),
+label:nth-of-type(5):has([name*="carousel-"]:checked)~img:nth-of-type(5),
+label:nth-of-type(6):has([name*="carousel-"]:checked)~img:nth-of-type(6),
+label:nth-of-type(7):has([name*="carousel-"]:checked)~img:nth-of-type(7),
+label:nth-of-type(8):has([name*="carousel-"]:checked)~img:nth-of-type(8) {
+    display: block;
+}
+</style>
+
+<h1>Carousel</h1>
+
+<section>
+    <label>
+        <input type="radio" name="carousel-1" checked>
+    </label>
+    <label>
+        <input type="radio" name="carousel-1">
+    </label>
+    <label>
+        <input type="radio" name="carousel-1">
+    </label>
+    <img src="/img/upload/floating_city.jpg">
+    <img src="/img/upload/force_of_nature.jpg">
+    <img src="/img/upload/sea_wyrm.jpg">
+</section>
+
+
+
+
+
+
+<section>
+    <label>
+        <input type="radio" name="carousel-2" checked>
+    </label>
+    <label>
+        <input type="radio" name="carousel-2">
+    </label>
+    <label>
+        <input type="radio" name="carousel-2">
+    </label>
+    <img src="/img/upload/floating_city.jpg">
+    <img src="/img/upload/force_of_nature.jpg">
+    <img src="/img/upload/sea_wyrm.jpg">
+</section>

@@ -1,0 +1,12 @@
+
+<h1>👉 <?=$title='Navigation bar'?></h1>
+   
+<?php _code::start(); ?>
+<nav>
+    <a href="#home" id="home"><?=Ku::icon('md/home')?> Home</a>
+    <a href="#feed" id="feed"><?=Ku::icon('md/feed')?> Feed <sup></sup></a>
+    <a href="#group" id="group"><?=Ku::icon('md/group')?> Group <sup>9+</sup></a>
+    <a href="#chat" id="chat"><?=Ku::icon('md/chat')?> Chat <sup>99+</sup></a>
+    <a href="#notifications" id="notifications"><?=Ku::icon('md/notifications')?> Notices <sup>999+</sup></a>
+</nav>
+<?=_code::endWithResult('navigation_bar')?>

@@ -1,0 +1,23 @@
+
+<h1>👉 <?=$title='Slider'?></h1>
+   
+<?php _code::start(); ?>
+<label>
+    <small><b>Slider:</b></small>
+    <div>
+        <?=Ku::icon('md/remove')?>
+        <input type="range" max="10" step="1">
+        <?=Ku::icon('md/add')?>
+    </div>
+    <i>Helper text</i>
+</label>
+<label>
+    <small><b>Disabled slider:</b></small>
+    <div>
+        <?=Ku::icon('md/volume_down')?>
+        <input type="range" max="10" step="1" aria-invalid="true" disabled>
+        <?=Ku::icon('md/volume_up')?>
+    </div>
+    <i>Error text</i>
+</label>
+<?=_code::endWithResult('slider')?>

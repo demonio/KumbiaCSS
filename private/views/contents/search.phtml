@@ -1,0 +1,26 @@
+
+<h1>👉 <?=$title='Search'?></h1>
+
+<?php _code::start(); ?>
+<div>
+    <search>
+        <form>
+            <label>
+                <span>Search</span>
+                <a href="#go-back"><img alt="md/arrow_back" loading="lazy" src="/img/icons/md/arrow_back.svg" width="18" height="18"></a>
+                <input type="search" name="query" placeholder>
+                <button><img alt="md/search" loading="lazy" src="/img/icons/md/search.svg" width="18" height="18"></button>
+                <i>Helper text</i>
+            </label>
+        </form>
+    </search>
+    <search>
+        <form>
+            <label>
+                <button><img alt="md/search" loading="lazy" src="/img/icons/md/search.svg" width="18" height="18"></button>
+                <input type="search" name="query" placeholder="Search...">
+            </label>
+        </form>
+    </search>
+</div>
+<?=_code::endWithResult('search')?>

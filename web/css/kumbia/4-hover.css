@@ -1,0 +1,2 @@
+/* If you are going to use displacement effects, do it here so that they are not applied when we use our fingers. */
+@media (hover: hover) {}

@@ -1,0 +1,56 @@
+
+<h1>👉 <?=$title='Text field'?></h1>
+
+<?php _code::start(); ?>
+<div>
+    <label>
+        <input type="text" name="fields[]">
+    </label>
+    <label>
+        <input type="text" name="fields[]">
+        <i>Helper text</i>
+    </label>
+    <label>
+        <span>Label</span>
+        <input type="text" name="fields[]" placeholder>
+    </label>
+</div>
+<div>
+    <label>
+        <span>Label</span>
+        <input type="text" name="fields[]" placeholder>
+        <i>Helper text</i>
+    </label>
+    <label>
+        <span>Label</span>
+        <input type="text" name="fields[]" placeholder aria-invalid="false">
+        <i>Everything's fine!</i>
+    </label>
+    <label>
+        <span>Label</span>
+        <input type="text" name="fields[]" placeholder aria-invalid="true">
+        <i>Error text</i>
+    </label>
+</div>
+<div>
+    <label>
+        <span>Label</span>
+        <img alt="md/search" loading="lazy" src="/img/icons/md/search.svg" width="18" height="18">
+        <input type="text" name="fields[]" placeholder>
+        <i>Helper text</i>
+    </label>
+    <label>
+        <span>Label</span>
+        <input type="text" name="fields[]" placeholder aria-invalid="false">
+        <img alt="md/search" loading="lazy" src="/img/icons/md/search.svg" width="18" height="18">
+        <i>Everything's fine!</i>
+    </label>
+    <label>
+        <span>Label</span>
+        <img alt="md/search" loading="lazy" src="/img/icons/md/search.svg" width="18" height="18">
+        <input type="text" name="fields[]" placeholder aria-invalid="true">
+        <img alt="md/search" loading="lazy" src="/img/icons/md/search.svg" width="18" height="18">
+        <i>Error text</i>
+    </label>
+</div>
+<?=_code::endWithResult('text_field')?>

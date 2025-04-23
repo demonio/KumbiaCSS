@@ -1,0 +1,30 @@
+
+<h1>👉 <?=$title='Checkbox'?></h1>
+   
+<?php _code::start(); ?>
+<label>
+    <input type="checkbox" name="checked" checked>
+    Checked
+</label>
+<label>
+    <input type="checkbox" name="readonly" readonly>
+    Readonly as Indeterminate
+</label>
+<label>
+    <input type="checkbox" name="empty">
+    Empty
+</label>
+<hr>
+<label>
+    <input type="checkbox" name="checked_disabled" checked disabled>
+    Checked Disabled
+</label>
+<label>
+    <input type="checkbox" name="readonly_disabled" readonly disabled>
+    Readonly Disabled
+</label>
+<label>
+    <input type="checkbox" name="empty_disabled" disabled>
+    Empty Disabled
+</label>
+<?=_code::endWithResult('checkbox')?>

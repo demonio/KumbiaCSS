@@ -1,0 +1,10 @@
+:where(html) {
+    --small-color: var(--on-surface);
+    --small-font-family: "Helvetica";
+    --small-font-size: 80%;
+}
+
+small {
+    color: var(--small-color);
+    font: var(--small-font-size) var(--small-font-family);
+}

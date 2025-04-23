@@ -1,0 +1,39 @@
+aside:has(nav) {
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 4;
+}
+
+aside nav {
+	background: var(--surface);
+	display: flex;
+	flex-direction: column;
+    gap: 0;
+	height: 100%;
+    width: 100px;
+}
+
+aside nav a {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding-block: 10px;
+	padding-inline: 10px;
+	text-align: center;
+}
+
+aside nav a:hover {
+	background: var(--hover-surface);
+}
+
+aside nav a:target {
+	background: var(--background);
+}
+
+
+aside nav img[src*="icons/md"] {
+	height: 32px;
+	width: 32px;
+}

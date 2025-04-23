@@ -1,0 +1,19 @@
+
+<h1>👉 <?=$title='Switch'?></h1>
+   
+<?php _code::start(); ?>
+<div>
+    <label for="switch-1">
+        <input type="checkbox" id="switch-1">
+        <span><?=Ku::icon('md/wifi')?></span>
+    </label>
+    <label for="switch-2">
+        <input type="checkbox" id="switch-2" checked>
+        No <span></span> Yes
+    </label>
+    <label for="switch-3">
+        <input type="checkbox" id="switch-3" disabled>
+        Rat race <span></span> Fuck you money
+    </label>
+</div>
+<?=_code::endWithResult('switch')?>

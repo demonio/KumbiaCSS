@@ -1,0 +1,50 @@
+:where(html) {
+    --figure-header-font: var(--h2-font-size) var(--h2-font-family);
+    --figure-section-font: 14px/20px var(--body-font-family);
+}
+
+figure {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    max-width: 100vw;
+    padding: 0;
+}
+
+figure img {
+    height: 100%;
+    width: 100%;
+}
+
+figure article {
+    border-radius: 0;
+    box-shadow: 0 0;
+    grid-area: soloyo;
+    text-align: center;
+}
+
+figure article header {
+    font: var(--figure-header-font);
+}
+
+figure article section {
+    font: var(--figure-section-font);
+}
+
+figure article footer {
+    justify-content: center;
+}
+
+figure:has(img) :is(header, section) {
+    color: white;
+}
+
+figcaption {
+    background: rgba(0, 0, 0, .85);
+    padding: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    width: 100%;
+}

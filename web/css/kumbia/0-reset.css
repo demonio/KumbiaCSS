@@ -1,0 +1,11 @@
+:focus-visible {
+    outline: 0;
+}
+
+iframe {
+    border: 0;
+}
+
+th {
+    text-align: left;
+}

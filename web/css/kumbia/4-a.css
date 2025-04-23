@@ -1,0 +1,41 @@
+a {
+    color: var(--color);
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+[href*="//"] {
+    display: inline-block;
+    max-width: calc(100% - 20px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+
+[href*="//"]:not(:has([src*=fa/brands]))::after {
+    display: inline-block;
+    background-image: url('/img/icons/md/open_in_new.svg');
+    background-position: top center;
+    background-size: 0.75rem auto;
+    background-repeat: no-repeat;
+    content: "";
+    height: 1rem;
+    width: 1rem;
+}
+
+[data-theme=dark] [href*="//"]::after {
+    filter: invert(1);
+}
+
+[href="#overlay"] {
+    background: rgb(0 0 0 / 50%);
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}

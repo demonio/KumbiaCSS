@@ -1,0 +1,57 @@
+:where(html) {
+    --aside-box-shadow: 0;
+    --aside-max-width: calc(var(--screen-xxs) - 42px);
+    --aside-min-width: fit-content;
+}
+
+aside {
+    border-radius: 8px;
+    box-shadow: var(--aside-box-shadow);
+    flex-direction: column;
+    flex: 0 0 auto;
+    margin: 0 2px 2px 0;
+    max-width: 280px;
+}
+
+aside~*,
+*~aside {
+    flex: 1;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+aside :is(a[href=""], a[href="#"]) {
+    background: var(--background);
+}
+
+@media (max-width: 767.98px) {
+    aside:not(:has(nav)) {
+        background: var(--background);
+        display: none;
+        height: 100%;
+        overflow-y: auto;
+        padding: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 4;
+    }
+
+    aside:target,
+    aside:target~[href="#overlay"] {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    aside:not(:has(nav, ul)) {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    aside~[href="#overlay"],
+    [href*="#aside-"] {
+        display: none;
+    }
+}

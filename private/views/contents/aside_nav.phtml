@@ -1,0 +1,18 @@
+<h1>👉 <?=$title='Aside nav'?></h1>
+
+<?php _code::start(); ?>
+<aside id="aside-nav">
+    <nav>
+        <a href="#home" id="home"><?=Ku::icon('md/home')?> Home</a>
+        <a href="#car" id="car"><?=Ku::icon('md/directions_car')?> Car</a>
+        <a href="#subway" id="subway"><?=Ku::icon('md/directions_subway')?> Subway</a>
+        <a href="#railway" id="railway"><?=Ku::icon('md/directions_railway')?> Railway</a>
+        <a href="#walk" id="walk"><?=Ku::icon('md/directions_walk')?> Walk</a>
+        <a href="#run" id="run"><?=Ku::icon('md/directions_run')?> Run</a>
+        <a href="#travel" id="travel"><?=Ku::icon('md/travel')?> Travel</a>
+    </nav>
+</aside>
+<a href="#overlay"></a>
+<a role="button" href="#aside-nav">Open Aside Nav in mobile</a>
+<?=_code::endWithResult('aside_nav')?>
+

@@ -1,0 +1,21 @@
+:where(html) {
+    --main-max-width: var(--screen-l);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-block: 20px;
+    margin-inline: auto;
+    max-width: var(--main-max-width);
+    padding: 0;
+    width: calc(100% - 40px);
+}
+
+@media (max-width: 575.98px) {
+    main {
+        margin-inline: 0;
+        width: 100%;
+    }
+}

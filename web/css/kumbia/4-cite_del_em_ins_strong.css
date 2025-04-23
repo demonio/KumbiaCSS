@@ -1,0 +1,33 @@
+:where(html) {
+    --cite-color: var(--color);
+    --del-color: var(--invalid-color);
+    --ins-color: var(--valid-color);
+    --em-color: var(--color);
+    --strong-color: var(--color);
+}
+
+cite {
+    color: var(--cite-color);
+}
+
+cite:before {
+    content: "— ";
+    height: 16px;
+    width: 16px;
+}
+
+del {
+    color: var(--del-color);
+}
+
+em {
+    color: var(--em-color);
+}
+
+ins {
+    color: var(--ins-color);
+}
+
+strong {
+    color: var(--strong-color);
+}

@@ -1,0 +1,89 @@
+:where(html) {
+    --carousel-border-radius: 20px;
+    --carousel-min-height: 360px;
+    --carousel-width: 10%;
+}
+
+/* PARENT MAIN CONTAINER */
+*:has(>*>picture>[name*="carousel_"]) {
+    overflow-x: hidden;
+}
+
+/* MAIN CONTAINER */
+*:has(>picture>[name*="carousel_"]) {
+    align-items: stretch;
+    display: flex;
+    flex-flow: row;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: margin-inline-start .5s;
+    width: 800%;
+    height: 100%;
+}
+
+*:has(>picture:nth-of-type(1)>[name*="carousel_"]:checked) {
+    margin-inline-start: 0;
+}
+
+*:has(>picture:nth-of-type(2)>[name*="carousel_"]:checked) {
+    margin-inline-start: calc(-70% - 8px);
+}
+
+*:has(>picture:nth-of-type(3)>[name*="carousel_"]:checked) {
+    margin-inline-start: calc(-140% - 16px);
+}
+
+*:has(>picture:nth-of-type(4)>[name*="carousel_"]:checked) {
+    margin-inline-start: calc(-210% - 24px);
+}
+
+*:has(>picture:nth-of-type(5)>[name*="carousel_"]:checked) {
+    margin-inline-start: calc(-280% - 32px);
+}
+
+*:has(>picture:nth-of-type(6)>[name*="carousel_"]:checked) {
+    margin-inline-start: calc(-350% - 40px);
+}
+
+*:has(>picture:nth-of-type(7)>[name*="carousel_"]:checked) {
+    margin-inline-start: calc(-420% - 48px);
+}
+
+*:has(>picture:nth-of-type(8)>[name*="carousel_"]:checked) {
+    margin-inline-start: calc(-490% - 56px);
+}
+
+/* PICTURE */
+picture:has([name*="carousel_"]) {
+    position: relative;
+    width: var(--carousel-width);
+}
+
+/* CHECK */
+[name*="carousel_"] {
+    border: 3px solid transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+}
+
+[name*="carousel_"]:checked {
+    display: none;
+}
+
+/* IMG */
+picture:has([name*="carousel_"]) a:first-child {
+    margin-block: 0;
+    margin-inline: 0;
+    padding-block: 0;
+    padding-inline: 0;
+    width: 100%;
+}
+
+picture:has([name*="carousel_"]) img {
+    border-radius: var(--carousel-border-radius);
+    display: block;
+    min-height: var(--carousel-min-height);
+    width: 100%;
+}

@@ -1,0 +1,32 @@
+
+<h1>👉 <?=$title='Button'?></h1>
+
+<?php _code::start(); ?>
+<p>
+    <a href="#template">I am a link &lt;a> in KumbiaCSS.</a>
+</p>
+<p>
+    <a role="button" href="#template">&lt;a role=button></a>
+    <button>&lt;button></button>
+    <button type="button" role="button">&lt;button type=button role=button></button>
+</p>
+<p>
+    <button type="button">&lt;button type=button></button>
+    <button type="reset">&lt;button type=reset></button>
+    <button type="submit">&lt;button type=submit></button>
+</p>
+<p>
+    <input type="button" value="&lt;input type=button>">
+    <input type="reset" value="&lt;input type=reset>">
+    <input type="submit" value="&lt;input type=submit>">
+</p>
+<p>
+    <button><?=Ku::icon('md/add_circle')?> &lt;button></button>
+    <button disabled><?=Ku::icon('md/add_circle')?> &lt;button></button>
+</p>
+<div>
+    <button type="button">&lt;button type=button></button>
+    <button type="reset">&lt;button type=reset></button>
+    <button type="submit">&lt;button type=submit></button>
+</div>
+<?=_code::endWithResult('button')?>

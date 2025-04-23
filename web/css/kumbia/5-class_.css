@@ -1,0 +1,41 @@
+.arrow {
+    animation: arrow .82s ease-in-out infinite;
+}
+
+/* Horizontal scrolling */
+.carousel {
+    display: flex;
+    min-width: 0;
+    overflow-x: auto;
+}
+
+/* Container for elements up to 250px that uses autocomplete instead of auto-fit. */
+.grid {
+    display: grid;
+    gap: 24px;
+}
+
+.grid.auto-fill {
+    grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+}
+
+/* Here we assume you use a 256px side with a parent next to it that uses the rest of the available width. */
+@media (min-width: 600px) {
+    .grid.aside-left {
+        grid-template-columns: 256px 1fr;
+    }
+    .grid.aside-right {
+        grid-template-columns: 1fr 256px;
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+/* If you do not want the text to be two lines, the text will end in an ellipsis. */
+.truncate-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

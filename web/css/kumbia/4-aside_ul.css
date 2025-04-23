@@ -1,0 +1,47 @@
+aside ul {
+    background: var(--surface);
+    border-radius: 8px;
+    margin-inline: 0;
+    padding-block: 8px;
+    padding-inline: 4px 0;
+}
+
+aside ul li {
+    min-height: 40px;
+    padding-block: 0;
+    padding-inline: 0;
+}
+
+aside ul li a {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 20px 0 0 20px;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 5px;
+    justify-content: start;
+    line-height: 18px;
+    margin-block: 0;
+    margin-inline: 4px 0;
+    min-height: 40px;
+    min-width: 0;
+    overflow-wrap: break-word;
+    padding-block: 0;
+    padding-inline: 24px;
+    width: 100%;
+}
+
+aside ul li:hover {
+    background: none;
+}
+
+aside ul li a:hover {
+    background: var(--background);
+}
+
+@media (max-width: 767.98px) {
+    aside ul {
+        border-radius: 0;
+        margin-inline: 0;
+    }
+}

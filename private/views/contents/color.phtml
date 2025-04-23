@@ -1,0 +1,128 @@
+
+<h1>👉 <?=$title='Color'?></h1>
+
+<?php
+$colors = ['red', 'orange', 'yellow', 'lime', 'green', 'jade', 'cyan', 'sky', 'blue', 'violet', 'magenta', 'rose'];
+?>
+<fieldset class="color-picker">
+    <legend>Color picker</legend>
+    <section>
+        <div>
+            <?php
+            $c = count($colors);
+            $i = 1;
+            foreach ($colors as $primary):
+                ?><button data-color="<?=$primary?>"></button><?php
+                #echo ($c > $i++) ? "\n        " : "\n    ";
+            endforeach;
+            ?>
+        </div>
+    </section>
+    <footer></footer>
+</fieldset>
+
+<?php _code::start(); ?>
+<html data-color="sky">
+<?=_code::end('set-color')['code']?>
+
+<div>
+    <ul>
+        <li>--tetradic-left: <button disabled style="background-color: var(--tetradic-left)"></button></li>
+        <li>--analogous-left: <button disabled style="background-color: var(--analogous-left)"></button></li>
+        <li>--color: <button disabled style="background-color: var(--color)"></button></li>
+        <li>--analogous-right: <button disabled style="background-color: var(--analogous-right)"></button></li>
+        <li>--tetradic-right: <button disabled style="background-color: var(--tetradic-right)"></button></li>
+    </ul>
+    <ul>
+        <li>--triad-left: <button disabled style="background-color: var(--triad-left)"></button></li>
+        <li>--complementary-left: <button disabled style="background-color: var(--complementary-left)"></button></li>
+        <li>--complementary: <button disabled style="background-color: var(--complementary)"></button></li>
+        <li>--complementary-right: <button disabled style="background-color: var(--complementary-right)"></button></li>
+        <li>--triad-right: <button disabled style="background-color: var(--triad-right)"></button></li>
+    </ul>
+</div>
+<hr>
+<div>
+    <ul>
+        <li>--background: <button disabled style="background-color: var(--background)"></button></li>
+        <li>--surface: <button disabled style="background-color: var(--surface)"></button></li>
+        <li>--neutral-color: <button disabled style="background-color: var(--neutral-color)"></button></li>
+        <li>--invalid-color: <button disabled style="background-color: var(--invalid-color)"></button></li>
+        <li>--valid-color: <button disabled style="background-color: var(--valid-color)"></button></li>
+    </ul>
+    <ul>
+        <li>--on-background: <button disabled style="background-color: var(--on-background)"></button></li>
+        <li>--on-surface: <button disabled style="background-color: var(--on-surface)"></button></li>
+        <li>---disabled-on-background: <button disabled style="background-color: var(--disabled-on-background)"></button></li>
+        <li>--invalid-border-color: <button disabled style="background-color: var(--invalid-border-color)"></button></li>
+        <li>--valid-border-color: <button disabled style="background-color: var(--valid-border-color)"></button></li>
+    </ul>
+</div>
+<hr>
+
+<h2>Vars 👇</h2>
+<div>
+<?php _code::start(); ?>
+[data-theme] {
+    --color-sat: 100;
+}
+
+[data-theme=light] {
+    --color-lig: 20;
+}
+
+[data-theme=dark] {
+    --color-lig: 80;
+}
+<?=_code::end('data-theme', 'css')['code']?>
+
+<?php _code::start(); ?>
+[data-color="red"] {
+    --color-hue: 0;
+}
+
+[data-color="orange"] {
+    --color-hue: 30;
+}
+
+[data-color="yellow"] {
+    --color-hue: 60;
+}
+
+[data-color="lime"] {
+    --color-hue: 90;
+}
+
+[data-color="green"] {
+    --color-hue: 120;
+}
+
+[data-color="jade"] {
+    --color-hue: 150;
+}
+
+[data-color="cyan"] {
+    --color-hue: 180;
+}
+
+[data-color="sky"] {
+    --color-hue: 210;
+}
+
+[data-color="blue"] {
+    --color-hue: 240;
+}
+
+[data-color="violet"] {
+    --color-hue: 270;
+}
+
+[data-color="magenta"] {
+    --color-hue: 300;
+}
+
+[data-color="rose"] {
+    --color-hue: 330;
+}
+<?=_code::end('data-color', 'css')['code']?>
+</div>

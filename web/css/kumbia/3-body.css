@@ -1,0 +1,27 @@
+:where(html) {
+    --body-color: var(--on-surface);
+    --body-font-family: "Helvetica";
+    --body-font-size: 1rem;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--body-color);
+    font: var(--body-font-size) var(--body-font-family);
+    margin: 0;
+    padding: 0;
+}
+
+body:has([id*="dialog-"]:target) {
+    overflow: hidden;
+}
+
+body:has([href="#overlay"]:target) {
+    overflow: auto;
+}
+
+@media (min-width: 576px) {
+	body:has(aside > nav) {
+		margin-left: 100px;
+	}
+}

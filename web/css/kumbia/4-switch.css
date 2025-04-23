@@ -1,0 +1,89 @@
+[for*="switch-"] {
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 5px;
+    height: 42px;
+}
+
+[for*="switch-"] input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[for*="switch-"] span {
+    background: var(--surface);
+    border: 2px solid var(--neutral-color);
+    border-radius: 30px;
+    display: inline-block;
+    position: relative;
+    width: 52px;
+    height: 32px;
+}
+
+[for*=switch-] span:before {
+    content: "";
+    display: inline-table;
+    width: 16px;
+    height: 16px;
+    border-radius: 30px;
+    position: absolute;
+    top: 5px;
+    transition: transform .4s;
+}
+
+[for*=switch-] input:not(:checked)+span:before {
+    background: var(--neutral-color);
+    left: 6px;
+    top: 7px;
+    transform: translateX(0);
+}
+
+[for*=switch-] input:not(:checked)+span:has(img):before {
+    width: 24px;
+    height: 24px;
+    left: 3px;
+    top: 3px;
+}
+
+[for*=switch-] input:checked+span:before {
+    background: var(--background);
+    color: var(--on-background);;
+    content: "✓";
+    font-weight: bold;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    top: 2px;
+    transform: translateX(22px);
+}
+
+[for*=switch-]:has(input:checked) span {
+    background: var(--color);
+    border: 2px solid var(--color);
+}
+
+[for*=switch-] span img {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    transition: transform .4s;
+}
+
+[for*=switch-] input:checked+span:has(img):before {
+    content: "";
+}
+
+[for*=switch-] input:checked+span:has(img) img {
+    transform: translateX(19px);
+    transition: transform .4s;
+}
+
+[data-theme=light] input:not(:checked)+span:has(img) img {
+    filter: invert(1);
+}
+
+[data-theme=dark] [for*=switch-] input:checked+span:has(img) img {
+    filter: invert(1);
+}

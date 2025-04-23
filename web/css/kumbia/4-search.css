@@ -1,0 +1,14 @@
+search {
+    margin-inline: auto;
+    max-width: 720px;
+    padding-block: 8px 0;
+    width: 100%;
+}
+
+search form {
+    position: relative;
+}
+
+search input {
+    border-radius: 40px;
+}

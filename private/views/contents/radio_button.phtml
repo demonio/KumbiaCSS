@@ -1,0 +1,22 @@
+
+<h1>👉 <?=$title='Radio button'?></h1>
+   
+<?php _code::start(); ?>
+<label>
+    <input type="radio" name="radio" value="checked" checked>
+    Checked
+</label>
+<label>
+    <input type="radio" name="radio" value="empty">
+    Empty
+</label>
+<hr>
+<label>
+    <input type="radio" name="radio_disabled" value="checked_disabled" checked disabled>
+    Checked Disabled
+</label>
+<label>
+    <input type="radio" name="radio_disabled" value="empty_disabled" disabled>
+    Empty Disabled
+</label>
+<?=_code::endWithResult('radio_button')?>

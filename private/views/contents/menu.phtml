@@ -1,0 +1,58 @@
+
+<h1>👉 <?=$title='Menu'?></h1>
+   
+<?php _code::start(); ?>
+<menu>
+    <li><a href="#item1"><?=Ku::icon('md/content_cut')?> Item 1 <small>⌘X</small></a></li>
+    <li><a href="#item2"><?=Ku::icon('md/content_copy')?> Item 2 <small>⌘C</small></a></li>
+    <li><a href="#item3"><?=Ku::icon('md/content_paste')?> Item 3 <small>⌘V</small></a></li>
+    <li>
+        <a href="#menu-2"><?=Ku::icon('md/cloud')?> Menu 2 <?=Ku::icon('md/arrow_right')?></a>
+
+        <menu id="menu-2">
+            <li><a href="#item4"><?=Ku::icon('md/content_cut')?> Item 4 <small>⌘X</small></a></li>
+            <li><a href="#item5"><?=Ku::icon('md/content_copy')?> Item 5 <small>⌘C</small></a></li>
+            <li>
+                <a href="#menu-3"><?=Ku::icon('md/cloud')?> Menu 3 <?=Ku::icon('md/arrow_right')?></a>
+
+                <menu id="menu-3">
+                    <li><a href="#item7"><?=Ku::icon('md/content_cut')?> Item 7 <small>⌘X</small></a></li>
+                    <li>
+                        <a href="#menu-4"><?=Ku::icon('md/cloud')?> Menu 4 <?=Ku::icon('md/arrow_right')?></a>
+
+                        <menu id="menu-4">
+                            <li>
+                                <a href="#menu-5"><?=Ku::icon('md/cloud')?> Menu 5 <?=Ku::icon('md/arrow_right')?></a>
+
+                                <menu id="menu-5">
+                                    <li><a href="#item13"><?=Ku::icon('md/content_cut')?> Item 13 <small>⌘X</small></a></li>
+                                    <li><a href="#item14"><?=Ku::icon('md/content_copy')?> Item 14 <small>⌘C</small></a></li>
+                                    <li><a href="#item15"><?=Ku::icon('md/content_paste')?> Item 15 <small>⌘V</small></a></li>
+                                </menu>
+                            </li>
+                            <li><a href="#item10"><?=Ku::icon('md/content_cut')?> Item 10 <small>⌘X</small></a></li>
+                            <li><a href="#item11"><?=Ku::icon('md/content_copy')?> Item 11 <small>⌘C</small></a></li>
+                            <li><a href="#item12"><?=Ku::icon('md/content_paste')?> Item 12 <small>⌘V</small></a></li>
+                        </menu>
+                    </li>
+                    <li><a href="#item8"><?=Ku::icon('md/content_copy')?> Item 8 <small>⌘C</small></a></li>
+                    <li><a href="#item9"><?=Ku::icon('md/content_paste')?> Item 9 <small>⌘V</small></a></li>
+                </menu>
+            </li>
+            <li><a href="#item6"><?=Ku::icon('md/content_paste')?> Item 6 <small>⌘V</small></a></li>
+        </menu>
+    </li>
+</menu>
+<?=_code::endWithResult('menu')?>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

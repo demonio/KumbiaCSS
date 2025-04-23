@@ -1,0 +1,29 @@
+:where(html) {
+    --article-box-shadow: 2px 2px 2px -1px var(--complementary);
+}
+
+article {
+    border-radius: 8px;
+    box-shadow: var(--article-box-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 2px 2px 0;
+    max-inline-size: 100%;
+    padding: 0;
+}
+
+div:has(article) {
+    justify-content: center;
+}
+
+@media (max-width: 575.98px) {
+    article {
+        box-shadow: 0 0;
+        margin-inline: 0;
+    }
+
+    div:has(article) {
+        padding-inline: 0;
+    }
+}

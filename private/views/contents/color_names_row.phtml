@@ -1,0 +1,172 @@
+<table id="colorTable">
+    <thead>
+        <tr>
+            <th>Keyword</th>
+            <th>Hexadecimal</th>
+            <th>HSL</th>
+            <th>RoW</th>
+            <th>RoB</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="color: white; background-color: black">
+            <td>black</td>
+            <td>#000000</td>
+            <td>hsl(0, 0, 0)</td>
+            <td>21.00</td>
+            <td>1.00</td>
+        </tr>
+        <tr style="color: white; background-color: blue">
+            <td>blue</td>
+            <td>#0000ff</td>
+            <td>hsl(240, 100, 50)</td>
+            <td>8.59</td>
+            <td>2.44</td>
+        </tr>
+        <tr style="color: white; background-color: brown">
+            <td>brown</td>
+            <td>#a52a2a</td>
+            <td>hsl(0, 59, 41)</td>
+            <td>7.08</td>
+            <td>2.96</td>
+        </tr>
+        <tr style="color: white; background-color: darkblue">
+            <td>darkblue</td>
+            <td>#00008b</td>
+            <td>hsl(240, 100, 27)</td>
+            <td>15.30</td>
+            <td>1.37</td>
+        </tr>
+        <tr style="color: white; background-color: darkgreen">
+            <td>darkgreen</td>
+            <td>#006400</td>
+            <td>hsl(120, 100, 20)</td>
+            <td>7.44</td>
+            <td>2.82</td>
+        </tr>
+        <tr style="color: white; background-color: darkmagenta">
+            <td>darkmagenta</td>
+            <td>#8b008b</td>
+            <td>hsl(300, 100, 27)</td>
+            <td>8.50</td>
+            <td>2.47</td>
+        </tr>
+        <tr style="color: white; background-color: darkred">
+            <td>darkred</td>
+            <td>#8b0000</td>
+            <td>hsl(0, 100, 27)</td>
+            <td>10.01</td>
+            <td>2.10</td>
+        </tr>
+        <tr style="color: white; background-color: darkslateblue">
+            <td>darkslateblue</td>
+            <td>#483d8b</td>
+            <td>hsl(248, 53, 39)</td>
+            <td>9.07</td>
+            <td>2.32</td>
+        </tr>
+        <tr style="color: white; background-color: darkslategray">
+            <td>darkslategray</td>
+            <td>#2f4f4f</td>
+            <td>hsl(180, 25, 39)</td>
+            <td>8.93</td>
+            <td>2.35</td>
+        </tr>
+        <tr style="color: white; background-color: indigo">
+            <td>indigo</td>
+            <td>#4b0082</td>
+            <td>hsl(240, 100, 25)</td>
+            <td>12.95</td>
+            <td>1.62</td>
+        </tr>
+        <tr style="color: white; background-color: maroon">
+            <td>maroon</td>
+            <td>#800000</td>
+            <td>hsl(0, 100, 25)</td>
+            <td>10.95</td>
+            <td>1.92</td>
+        </tr>
+        <tr style="color: white; background-color: mediumblue">
+            <td>mediumblue</td>
+            <td>#0000cd</td>
+            <td>hsl(240, 100, 40)</td>
+            <td>11.16</td>
+            <td>1.88</td>
+        </tr>
+        <tr style="color: white; background-color: midnightblue">
+            <td>midnightblue</td>
+            <td>#191970</td>
+            <td>hsl(240, 64, 27)</td>
+            <td>14.85</td>
+            <td>1.41</td>
+        </tr>
+        <tr style="color: white; background-color: navy">
+            <td>navy</td>
+            <td>#000080</td>
+            <td>hsl(240, 100, 25)</td>
+            <td>16.01</td>
+            <td>1.31</td>
+        </tr>
+        <tr style="color: white; background-color: purple">
+            <td>purple</td>
+            <td>#800080</td>
+            <td>hsl(300, 100, 25)</td>
+            <td>9.42</td>
+            <td>2.23</td>
+        </tr>
+        <tr style="color: white; background-color: saddlebrown">
+            <td>saddlebrown</td>
+            <td>#8b4513</td>
+            <td>hsl(25, 76, 31)</td>
+            <td>7.10</td>
+            <td>2.96</td>
+        </tr>
+    </tbody>
+</table>
+<script>
+    function hexToRgb(hex) {
+        hex = hex.replace(/^#/, '');
+        if (hex.length === 3) {
+            hex = hex.split('').map(function(hex) {
+                return hex + hex;
+            }).join('');
+        }
+        const r = parseInt(hex.substring(0, 2), 16);
+        const g = parseInt(hex.substring(2, 4), 16);
+        const b = parseInt(hex.substring(4, 6), 16);
+        return {
+            r,
+            g,
+            b
+        };
+    }
+
+    function luminance(r, g, b) {
+        [r, g, b] = [r, g, b].map(function(val) {
+            val /= 255;
+            return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4);
+        });
+        return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    }
+
+    function contrastRatio(l1, l2) {
+        return (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
+    }
+
+    function calculateContrast() {
+        const table = document.getElementById('colorTable');
+        const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+        for (const row of rows) {
+            const hex = row.cells[1].textContent.trim();
+            const rgb = hexToRgb(hex);
+            const l1 = luminance(rgb.r, rgb.g, rgb.b);
+            const contrastAgainstWhite = contrastRatio(l1, luminance(255, 255, 255));
+            const contrastAgainstBlack = contrastRatio(l1, luminance(0, 0, 0));
+
+            row.cells[3].textContent = contrastAgainstWhite.toFixed(2);
+            row.cells[4].textContent = contrastAgainstBlack.toFixed(2);
+        }
+    }
+
+    calculateContrast();
+</script>

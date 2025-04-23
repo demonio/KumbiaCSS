@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html data-color="green" data-theme="dark" id="important" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title><?=$title?> | KumbiaCSS</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="/css/kumbia.min.css?v=<?=$version?>" rel="stylesheet">
+    <link href="/css/web.min.css?v=<?=$version?>" rel="stylesheet">
+    <link href="/img/favicon.svg" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <a href="#aside-1"><?=Ku::icon('md/menu')?> Menu</a>
+        <a href="/" id="index">
+            <img alt="KumbiaCSS framework" src="/img/kumbiacss.svg">
+            <i>Framework CSS Classless & JSless</i>
+        </a>
+    </nav>
+    <main>
+        <div>
+            <aside id="aside-1">
+                <ul>
+                    <?php foreach ($contents as $key=>$val):
+                        $href = str_starts_with($key, $action_name) ? '' : "/contents/$key"; ?>
+                        <li><a href="<?=$href?>"><?=$val?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            </aside>
+            <a href="#overlay"></a>
+            <section>
+                <?php View::content(); ?>
+            </section>
+        </div>
+        <footer></footer>
+    </main>
+    <script src="/javascript/web.min.js?v=<?=$version?>"></script>
+</body>
+
+</html>

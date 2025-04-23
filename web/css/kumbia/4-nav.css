@@ -1,0 +1,84 @@
+:where(html) {
+    --nav-background: var(--background);
+    --nav-border-radius: 40px;
+    --nav-box-shadow: var(--box-shadow-complementary);
+    --nav-color: var(--on-background);
+    --nav-gap: 0;
+    --nav-justify-content: space-between;
+    --nav-margin-block: 20px 4px;
+    --nav-margin-inline: 20px;
+	--nav-child-border-radius: 40px;
+}
+
+@media (max-width: 575.98px) {
+	:not(aside)>nav:not(:has(dialog)) {
+		--nav-border-radius: 0;
+		--nav-margin-block: 0 4px;
+		--nav-margin-inline: 0;
+	}
+	:not(aside)>nav:not(:has(dialog))>* {
+		--nav-child-border-radius: 0;
+	}
+}
+
+:not(aside)>nav:not(:has(dialog)) {
+	background: var(--nav-background);
+	border-radius: var(--nav-border-radius);
+	box-shadow: var(--nav-box-shadow);
+	color: var(--nav-color);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: var(--nav-gap);
+	justify-content: var(--nav-justify-content);
+	margin-block: var(--nav-margin-block);
+	margin-inline: var(--nav-margin-inline);
+	padding-inline: 0;
+	text-align: center;
+}
+
+main>nav:not(:has(dialog)) {
+	margin-inline: 0;
+}
+
+:not(aside)>nav:not(:has(dialog))>* {
+	align-items: center;
+	align-self: stretch;
+	border-radius: var(--nav-child-border-radius);
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	gap: 4px;
+	justify-content: center;
+	margin-block: 0;
+	margin-inline: auto;
+	padding-block: 10px;
+	padding-inline: 10px;
+	position: relative;
+}
+
+:not(aside)>nav:not(:has(dialog)) a:is(:hover, :target) {
+	background: var(--surface); 
+}
+
+:not(aside)>nav:not(:has(dialog)) sup {
+	background: red;
+	border-radius: 15px;
+	color: white;
+	padding-block: 8px;
+	padding-inline: 7px;
+	position: absolute;
+	transform: translate(75%, 0);
+}
+
+/*:not(aside)>nav:not(:has(> :nth-child(4)))> :nth-child(2) {
+	flex: 2;
+}*/
+
+aside > nav {
+    justify-content: start;
+}
+
+nav svg {
+	max-height: 64px;
+}

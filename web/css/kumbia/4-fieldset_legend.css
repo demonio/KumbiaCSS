@@ -1,0 +1,29 @@
+:where(html) {
+    --fieldset-box-shadow: var(--box-shadow-complementary);
+}
+
+fieldset {
+    border: none;
+    border-radius: 20px;
+	box-shadow: var(--fieldset-box-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+}
+
+legend {
+    background: var(--background);
+    border: none;
+    border-radius: 20px;
+	box-shadow: var(--fieldset-box-shadow);
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 20px;
+    min-height: 40px;
+    padding-block: 10px;
+    padding-inline: 24px;
+} 

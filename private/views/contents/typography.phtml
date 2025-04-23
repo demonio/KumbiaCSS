@@ -1,0 +1,197 @@
+<h1>👉 <?=$title='Typography'?></h1>
+
+<?php _code::start(); ?>
+<h1>h1, ideal for the main title</h1>
+<h2>h2, appropriate for important section titles.</h2>
+<h3>h3, suitable for subtitles.</h3>
+<h4>h4, good for sublevels in the structure</h4>
+<h5>h5, useful for less important titles</h5>
+<h6>h6, helpful for small subtitles</h6>
+<?=_code::endWithResult('hn'); ?>
+
+<hr>
+
+<?php _code::start(); ?>
+<p>This is the text of a paragraph. This is the text of a paragraph. This is the text of a paragraph. This is the text
+    of a paragraph. This is the text of a paragraph. This is the text of a paragraph. This is the text of a paragraph.
+</p>
+<small>This is a small text.</small>
+<?=_code::endWithResult('p_small'); ?>
+
+<hr>
+
+<?php _code::start(); ?>
+<i>This is a italic text.</i>
+<em>This is a emphasis colored text.</em>
+<b>This is a bold text.</b>
+<strong>This is a strong colored text.</strong>
+<?=_code::endWithResult('i_em_b_strong'); ?>
+
+<hr>
+
+<h2>Vars 👇</h2>
+<div>
+<?php _code::start(); ?>
+--html-font-size-xxs: 14px;
+--html-font-size-xs: 16px;
+--html-font-size-s: 18px;
+--html-font-size-m: 20px;
+--html-font-size-l: 22px;
+--html-font-size-xl: 24px;
+--html-font-size-xxl: 26px;
+<?=_code::end('html', 'css')['code']?>
+
+<?php _code::start(); ?>
+--h1-color: var(--on-surface);
+--h2-color: var(--on-surface);
+--h3-color: var(--on-surface);
+--h4-color: var(--on-surface);
+--h5-color: var(--on-surface);
+--h6-color: var(--on-surface);
+--h1-font-family: "Arial";
+--h2-font-family: "Verdana";
+--h3-font-family: "Georgia";
+--h4-font-family: "Courier New";
+--h5-font-family: "Times New Roman";
+--h6-font-family: "Tahoma";
+--h1-font-size: 3.2rem;
+--h2-font-size: 2.6rem;
+--h3-font-size: 1.8rem;
+--h4-font-size: 1.4rem;
+--h5-font-size: 1.2rem;
+--h6-font-size: 1.1rem;
+<?=_code::end('hn_vars', 'css')['code']?>
+
+<?php _code::start(); ?>
+--body-color: var(--on-surface);
+--body-font-family: "Helvetica";
+--body-font-size: 1rem;
+<?=_code::end('body', 'css')['code']?>
+
+<?php _code::start(); ?>
+--small-color: var(--on-surface);
+--small-font-family: "Helvetica";
+--small-font-size: 80%;
+<?=_code::end('small', 'css')['code']?>
+</div>
+
+<?php /*
+<fieldset>
+    <?php _code::start(); ?>
+<?=_code::end('p')['code']?>
+</fieldset>
+
+<div class="grid">
+    <fieldset>
+        <?php _code::start(); ?>
+        <?=_code::end('small')['code']?>
+    </fieldset>
+
+    <fieldset>
+        <?php _code::start(); ?>
+        <mark>Highlighted text</mark>
+        <?=_code::end('mark')['code']?>
+    </fieldset>
+</div>
+
+<div class="grid">
+    <fieldset>
+        <?php _code::start(); ?>
+        <abbr title="Abbreviation">Abbr.</abbr>
+        <?=_code::end('abbr')['code']?>
+    </fieldset>
+
+    <fieldset>
+        <?php _code::start(); ?>
+        <kbd>Ctrl + C</kbd>
+        <?=_code::end('kbd')['code']?>
+    </fieldset>
+</div>
+
+<div class="grid">
+    <fieldset>
+        <?php _code::start(); ?>
+        <b>Bold text</b>
+        <?=_code::end('b')['code']?>
+    </fieldset>
+
+    <fieldset>
+        <?php _code::start(); ?>
+        <strong>Strong text</strong>
+        <?=_code::end('strong')['code']?>
+    </fieldset>
+</div>
+
+<div class="grid">
+    <fieldset>
+        <?php _code::start(); ?>
+        <i>Italic text</i>
+        <?=_code::end('i')['code']?>
+    </fieldset>
+
+    <fieldset>
+        <?php _code::start(); ?>
+        <em>Emphasis text</em>
+        <?=_code::end('em')['code']?>
+    </fieldset>
+</div>
+
+<div class="grid">
+    <fieldset>
+        <?php _code::start(); ?>
+        <del>Deleted text</del>
+        <?=_code::end('del')['code']?>
+    </fieldset>
+
+    <fieldset>
+        <?php _code::start(); ?>
+        <ins>Inserted text</ins>
+        <?=_code::end('ins')['code']?>
+    </fieldset>
+</div>
+
+<div class="grid">
+    <fieldset>
+        <?php _code::start(); ?>
+        <u>Underline text</u>
+        <?=_code::end('u')['code']?>
+    </fieldset>
+
+    <fieldset>
+        <?php _code::start(); ?>
+        <s>Strikethrough text</s>
+        <?=_code::end('s')['code']?>
+    </fieldset>
+</div>
+
+<div class="grid">
+    <fieldset>
+        <?php _code::start(); ?>
+        Text <sub>Sub</sub>
+        <?=_code::end('sub')['code']?>
+    </fieldset>
+
+    <fieldset>
+        <?php _code::start(); ?>
+        Text <sup>Sup</sup>
+        <?=_code::end('sup')['code']?>
+    </fieldset>
+</div>
+
+<fieldset>
+    <legend>Horizontal Rule</legend>
+    <?php _code::start(); ?>
+    <hr>
+    <?=_code::end('hr')['code']?>
+</fieldset>
+
+<fieldset>
+    <legend>Blockquote</legend>
+    <?php _code::start(); ?>
+    <blockquote>
+        <p>“Life is like riding a bicycle. To keep your balance, you must keep moving.”</p>
+        <cite>— Albert Einstein</cite>
+    </blockquote>
+    <?=_code::end('blockquote')['code']?>
+</fieldset>
+*/

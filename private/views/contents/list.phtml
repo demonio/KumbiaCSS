@@ -1,0 +1,49 @@
+
+<h1>👉 <?=$title='List'?></h1>
+   
+<?php _code::start(); ?>
+<ul>
+    <li>Only Text</li>
+    <li>
+        <?=Ku::icon('md/person')?> Icon + Text
+    </li>
+    <li>
+        <label>
+            <img src="/img/avatars/xxs.lobo_blanco.png" width="40" height="40">
+            <p>Avatar + Text + Checkbox (inside Label)</p>
+            <input type="checkbox">
+        </label>
+    </li>
+    <li>
+        <label>
+            <img src="/img/products/coffee_pot.jpg" width="56" height="56">
+            <p>Img + Text + Small (inside Label)</p>
+            <small>99+</small>
+        </label>
+    </li>
+    <li>
+        <label>
+            <img src="/img/products/coffee_pot.jpg" width="64" height="64">
+            <p>Img (height=64) + Text + Small (inside Label)</p>
+            <input type="checkbox">
+        </label>
+    </li>
+    <li>
+        <label>
+            <img src="/img/products/coffee_pot.jpg" width="64" height="64">
+            <p>Img (height=64) + Text + Small (inside Label)<br>
+            Two-line list</p>
+            <input type="checkbox">
+        </label>
+    </li>
+    <li>
+        <label>
+            <img src="/img/products/coffee_pot.jpg" width="64" height="64">
+            <p>Img (height=64) + Text + Small (inside Label)<br>
+            Two-line list<br>
+            Three-line list</p>
+            <input type="checkbox">
+        </label>
+    </li>
+</ul>
+<?=_code::endWithResult('list')?>

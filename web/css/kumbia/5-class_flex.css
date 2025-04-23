@@ -1,0 +1,128 @@
+.flex {
+    align-items: stretch;
+    display: flex;
+    gap: 0;
+}
+
+.flex>*>* {
+    margin-inline: 10px;
+}
+
+/* xxs */
+@media (max-width: 575.98px) {
+    .flex .xxs0 { display: none; }
+    .flex .xxs1 { flex: 0 0 8.33333%; }
+    .flex .xxs2 { flex: 0 0 16.66666%; }
+    .flex .xxs3 { flex: 0 0 24.99999%; }
+    .flex .xxs4 { flex: 0 0 33.33333%; }
+    .flex .xxs5 { flex: 0 0 41.66666%; }
+    .flex .xxs6 { flex: 0 0 49.99999%; }
+    .flex .xxs7 { flex: 0 0 58.33333%; }
+    .flex .xxs8 { flex: 0 0 66.66666%; }
+    .flex .xxs9 { flex: 0 0 74.99999%; }
+    .flex .xxs10 { flex: 0 0 83.33333%; }
+    .flex .xxs11 { flex: 0 0 91.66666%; }
+    .flex .xxs12 { flex: 1 1 100%; }
+}
+
+/* xs */
+@media (min-width: 576px) {
+    .flex .xs0 { display: none; }
+    .flex .xs1 { flex: 0 0 8.33333%; }
+    .flex .xs2 { flex: 0 0 16.66666%; }
+    .flex .xs3 { flex: 0 0 24.99999%; }
+    .flex .xs4 { flex: 0 0 33.33333%; }
+    .flex .xs5 { flex: 0 0 41.66666%; }
+    .flex .xs6 { flex: 0 0 49.99999%; }
+    .flex .xs7 { flex: 0 0 58.33333%; }
+    .flex .xs8 { flex: 0 0 66.66666%; }
+    .flex .xs9 { flex: 0 0 74.99999%; }
+    .flex .xs10 { flex: 0 0 83.33333%; }
+    .flex .xs11 { flex: 0 0 91.66666%; }
+    .flex .xs12 { flex: 1 1 100%; }
+}
+
+/* s */
+@media (min-width: 768px) {
+    .flex .s0 { display: none; }
+    .flex .s1 { flex: 0 0 8.33333%; }
+    .flex .s2 { flex: 0 0 16.66666%; }
+    .flex .s3 { flex: 0 0 24.99999%; }
+    .flex .s4 { flex: 0 0 33.33333%; }
+    .flex .s5 { flex: 0 0 41.66666%; }
+    .flex .s6 { flex: 0 0 49.99999%; }
+    .flex .s7 { flex: 0 0 58.33333%; }
+    .flex .s8 { flex: 0 0 66.66666%; }
+    .flex .s9 { flex: 0 0 74.99999%; }
+    .flex .s10 { flex: 0 0 83.33333%; }
+    .flex .s11 { flex: 0 0 91.66666%; }
+    .flex .s12 { flex: 1 1 100%; }
+}
+
+/* m */
+@media (min-width: 992px) {
+    .flex .m0 { display: none; }
+    .flex .m1 { flex: 0 0 8.33333%; }
+    .flex .m2 { flex: 0 0 16.66666%; }
+    .flex .m3 { flex: 0 0 24.99999%; }
+    .flex .m4 { flex: 0 0 33.33333%; }
+    .flex .m5 { flex: 0 0 41.66666%; }
+    .flex .m6 { flex: 0 0 49.99999%; }
+    .flex .m7 { flex: 0 0 58.33333%; }
+    .flex .m8 { flex: 0 0 66.66666%; }
+    .flex .m9 { flex: 0 0 74.99999%; }
+    .flex .m10 { flex: 0 0 83.33333%; }
+    .flex .m11 { flex: 0 0 91.66666%; }
+    .flex .m12 { flex: 1 1 100%; }
+}
+
+/* l */
+@media (min-width: 1200px) {
+    .flex .l0 { display: none; }
+    .flex .l1 { flex: 0 0 8.33333%; }
+    .flex .l2 { flex: 0 0 16.66666%; }
+    .flex .l3 { flex: 0 0 24.99999%; }
+    .flex .l4 { flex: 0 0 33.33333%; }
+    .flex .l5 { flex: 0 0 41.66666%; }
+    .flex .l6 { flex: 0 0 49.99999%; }
+    .flex .l7 { flex: 0 0 58.33333%; }
+    .flex .l8 { flex: 0 0 66.66666%; }
+    .flex .l9 { flex: 0 0 74.99999%; }
+    .flex .l10 { flex: 0 0 83.33333%; }
+    .flex .l11 { flex: 0 0 91.66666%; }
+    .flex .l12 { flex: 1 1 100%; }
+}
+
+/* xl */
+@media (min-width: 1400px) {
+    .flex .xl0 { display: none; }
+    .flex .xl1 { flex: 0 0 8.33333%; }
+    .flex .xl2 { flex: 0 0 16.66666%; }
+    .flex .xl3 { flex: 0 0 24.99999%; }
+    .flex .xl4 { flex: 0 0 33.33333%; }
+    .flex .xl5 { flex: 0 0 41.66666%; }
+    .flex .xl6 { flex: 0 0 49.99999%; }
+    .flex .xl7 { flex: 0 0 58.33333%; }
+    .flex .xl8 { flex: 0 0 66.66666%; }
+    .flex .xl9 { flex: 0 0 74.99999%; }
+    .flex .xl10 { flex: 0 0 83.33333%; }
+    .flex .xl11 { flex: 0 0 91.66666%; }
+    .flex .xl12 { flex: 1 1 100%; }
+}
+
+/* xxl */
+@media (min-width: 1920px) {
+    .flex .xxl0 { display: none; }
+    .flex .xxl1 { flex: 0 0 8.33333%; }
+    .flex .xxl2 { flex: 0 0 16.66666%; }
+    .flex .xxl3 { flex: 0 0 24.99999%; }
+    .flex .xxl4 { flex: 0 0 33.33333%; }
+    .flex .xxl5 { flex: 0 0 41.66666%; }
+    .flex .xxl6 { flex: 0 0 49.99999%; }
+    .flex .xxl7 { flex: 0 0 58.33333%; }
+    .flex .xxl8 { flex: 0 0 66.66666%; }
+    .flex .xxl9 { flex: 0 0 74.99999%; }
+    .flex .xxl10 { flex: 0 0 83.33333%; }
+    .flex .xxl11 { flex: 0 0 91.66666%; }
+    .flex .xxl12 { flex: 1 1 100%; }
+}

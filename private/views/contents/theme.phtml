@@ -1,0 +1,17 @@
+
+<h1>👉 <?=$title='Theme'?></h1>
+
+<fieldset class="theme-picker">
+    <legend>Theme picker</legend>
+    <section>
+        <label for="switch-1">
+            <input type="checkbox" id="switch-1" name="dark_mode">
+            <span><?=Ku::icon('md/dark_mode')?></span>
+        </label>
+    </section>
+    <footer></footer>
+</fieldset>
+
+<?php _code::start(); ?>
+<html data-theme="dark">
+<?=_code::end('set-theme')['code']?>

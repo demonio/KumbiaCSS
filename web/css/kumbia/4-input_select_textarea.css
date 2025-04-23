@@ -1,0 +1,391 @@
+:where(html) {
+    --input-box-shadow: var(--box-shadow-color);
+}
+
+/* Label */
+label:has(input:not([type="button"],
+		[type="reset"],
+		[type="submit"],
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"]),
+	select,
+	textarea) {
+	color: var(--complementary);
+	display: inline-flex;
+	gap: 4px;
+	inline-size: auto;
+	margin-block: 5px;
+    max-width: 100%;
+	min-height: 40px;
+	position: relative;
+}
+
+/* First element not input child of label */
+label:has(input:not([type="button"],
+		[type="reset"],
+		[type="submit"],
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"]),
+	select,
+	textarea)>*:first-child:not(a, button, input, img, small, select, textarea) {
+	color: var(--disabled-on-background);
+    font-style: italic;
+	inset: 10px auto auto 15px;
+	line-height: normal;
+	position: absolute;
+	transition: all 0.2s;
+}
+
+:is(label:has(input:not([type="button"],
+		[type="reset"],
+		[type="submit"],
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"]),
+	select,
+	textarea)>*:first-child:not(a, button, input, img, small, select, textarea))::after {
+	content: "...";
+}
+
+/* First element not input child of label with a or img */
+:where(label:has(> :is(a, img) ~ :is(input:not([type="button"],
+				[type="reset"],
+				[type="submit"],
+				[type="checkbox"],
+				[type="radio"],
+				[type="range"]),
+			select,
+			textarea)) > *:first-child:not(a, button, input, img, small, select, textarea)) {
+	padding-inline-start: 30px;
+}
+
+/* First element not input child of label with input focus or filled */
+label:has(:is(input, select, textarea):focus)>*:first-child:not(a, button, input, img, small, select, textarea),
+label:has(:is(input, select, textarea):not(:placeholder-shown))>*:first-child:not(a, button, input, img, small, select, textarea) {
+	background-color: var(--background);
+	color: var(--complementary);
+	font-style: normal;
+	inset: -8px auto auto 8px;
+	font-size: small;
+	padding-inline: 4px;
+}
+
+:is(label:has(:is(input, select, textarea):focus)>*:first-child:not(a, button, input, img, small, select, textarea),
+label:has(:is(input, select, textarea):not(:placeholder-shown))>*:first-child:not(a, button, input, img, small, select, textarea))::after {
+	content: "";
+}
+
+@media (max-width: 575.98px) {
+	label:has(input:not([type="button"],
+			[type="reset"],
+			[type="submit"],
+			[type="checkbox"],
+			[type="radio"],
+			[type="range"]),
+		select,
+		textarea)>*:first-child:not(a, button, input, img, small, select, textarea) {
+		inset: 12px auto auto 11px;
+	}
+
+	label:has(:is(input, select, textarea):focus)>*:first-child:not(a, button, input, img, small, select, textarea),
+	label:has(:is(input, select, textarea):not(:placeholder-shown))>*:first-child:not(a, button, input, img, small, select, textarea) {
+		inset: -8px auto auto 8px;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+	label:has(:is(input, select, textarea):focus)>*:first-child:not(a, button, input, img, small, select, textarea),
+	label:has(:is(input, select, textarea):not(:placeholder-shown))>*:first-child:not(a, button, input, img, small, select, textarea) {
+		inset: -10px auto auto 8px;
+	}
+}
+
+article label:has(:is(input, select, textarea):focus)>*:first-child:not(a, button, input, img, small, select, textarea),
+label:has(:is(input, select, textarea):not(:placeholder-shown))>*:first-child:not(a, button, input, img, small, select, textarea) {
+	background-color: var(--background);
+}
+
+/* Text in label and helper text valid */
+label:has(:is(input:not([type="button"],
+			[type="reset"],
+			[type="submit"],
+			[type="button"],
+			[type="reset"],
+			[type="submit"],
+			[type="checkbox"],
+			[type="radio"],
+			[type="range"]),
+		select,
+		textarea)[aria-invalid="false"]),
+label:has(:is(input:not([type="button"],
+			[type="reset"],
+			[type="submit"],
+			[type="checkbox"],
+			[type="radio"],
+			[type="range"]),
+		select,
+		textarea)[aria-invalid="false"]) input~* {
+	color: var(--valid-color);
+}
+
+/* Text in label and helper text invalid */
+label:has(:is(input:not([type="button"],
+			[type="reset"],
+			[type="submit"],
+			[type="checkbox"],
+			[type="radio"],
+			[type="range"]),
+		select,
+		textarea)[aria-invalid="true"]),
+label:has(:is(input:not([type="button"],
+			[type="reset"],
+			[type="submit"],
+			[type="checkbox"],
+			[type="radio"],
+			[type="range"]),
+		select,
+		textarea)[aria-invalid="true"]) input~* {
+	color: var(--invalid-color);
+}
+
+/* Left a, button or img */
+label:has(input:not([type="button"],
+		[type="reset"],
+		[type="submit"],
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"]),
+	select,
+	textarea)> :is(a, button, img) {
+	inset: 12px auto auto 12px;
+	position: absolute;
+}
+
+/* Right a, button, or img */
+label:has(input:not([type="button"],
+		[type="reset"],
+		[type="submit"],
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"]),
+	select,
+	textarea)> :is(input, select, textarea)~ :is(a, button, img) {
+	inset: 12px 12px auto auto;
+}
+
+label:has(input:not([type="button"],
+		[type="reset"],
+		[type="submit"],
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"]),
+	select,
+	textarea) {
+	flex: 1 1;
+	flex-direction: column;
+}
+
+/* Button child of label */
+label:has(input:not([type="button"],
+		[type="reset"],
+		[type="submit"],
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"]),
+	select,
+	textarea) button {
+	background: transparent;
+	border: 0;
+	box-shadow: none;
+	margin-block: 0;
+	margin-inline: 0;
+	min-height: unset;
+	padding-block: 0;
+	padding-inline: 0;
+}
+
+/* Element */
+input:not([type="button"],
+	[type="reset"],
+	[type="submit"],
+	[type="checkbox"],
+	[type="radio"],
+	[type="range"]),
+select,
+textarea {
+	appearance: none;
+	background: none;
+	/*border: 1px solid var(--neutral-color);*/
+	border: 1px solid transparent;
+	box-shadow: var(--input-box-shadow);
+	color: var(--on-surface);
+	flex: 1;
+	inline-size: 100%;
+	min-height: 40px;
+	outline: none;
+	padding: 10px;
+}
+
+/* Element not search */
+input:not([type="button"],
+	[type="reset"],
+	[type="submit"],
+	[type="checkbox"],
+	[type="radio"],
+	[type="range"],
+	[type="search"]),
+select,
+textarea {
+	border-radius: 4px;
+}
+
+/* Element outline by default */
+:is(input:not([type="button"],
+		[type="reset"],
+		[type="submit"],
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"]),
+	select,
+	textarea):not([aria-invalid]):focus {
+	outline: 1px solid var(--color);
+}
+
+/* Element with a, button or img on the left */
+label:has(:is(a, button, img) + :is(input:not([type="button"],
+			[type="reset"],
+			[type="submit"],
+			[type="checkbox"],
+			[type="radio"],
+			[type="range"]),
+		select,
+		textarea)) :is(input:not([type="button"],
+		[type="reset"],
+		[type="submit"],
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"]),
+	select,
+	textarea) {
+	padding-inline-start: 42px;
+}
+
+/* Element with a, button or img on the right */
+label:is(input:not([type="button"],
+		[type="reset"],
+		[type="submit"],
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"]),
+	select,
+	textarea):has(+ :is(a, button, img)) {
+	padding-inline-end: 42px;
+}
+
+/* Element valid */
+:is(input:not([type="button"],
+		[type="reset"],
+		[type="submit"],
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"]),
+	select,
+	textarea)[aria-invalid="false"] {
+	box-shadow: 0 1px 3px 1px var(--valid-color);
+	color: var(--valid-color);
+}
+
+:is(input:not([type="button"],
+		[type="reset"],
+		[type="submit"],
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"]),
+	select,
+	textarea)[aria-invalid="false"]:focus {
+	outline: 1px solid var(--valid-color);
+}
+
+/* Element invalid */
+:is(input:not([type="button"],
+		[type="reset"],
+		[type="submit"],
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"]),
+	select,
+	textarea)[aria-invalid="true"] {
+	box-shadow: 0 1px 3px 1px var(--invalid-color);
+	color: var(--invalid-color);
+}
+
+:is(input:not([type="button"],
+		[type="reset"],
+		[type="submit"],
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"]),
+	select,
+	textarea)[aria-invalid="true"]:focus {
+	outline: 1px solid var(--invalid-color);
+}
+
+/* Element placeholder for label effect with exceptions */
+label:has(> *:first-child:not(a, button, input, img, small, select, textarea))::placeholder {
+	color: transparent;
+}
+
+/* Helper text */
+label:has(input:not([type="button"],
+		[type="reset"],
+		[type="submit"],
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"]),
+	select,
+	textarea) :is(input, select, textarea)~*:not(a, button, img) {
+	font-size: smaller;
+	margin-block: 4px 0;
+	padding-inline: 16px;
+}
+
+/* Select */
+[data-theme="light"] select {
+	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg>') no-repeat right 4px center / 18px;
+}
+
+[data-theme="dark"] select {
+	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="white" d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg>') no-repeat right 4px center / 18px;
+}
+
+select {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+option {
+	background-color: var(--background);
+	border-radius: 0;
+
+}
+
+option[value=""] {
+	color: var(--disabled-on-background);
+	font-style: italic;
+}
+
+textarea {
+	flex: auto;
+}
+
+[type="file"] {
+    cursor: pointer;
+}
+
+[type="file"]::file-selector-button {
+    display: none;
+}
+

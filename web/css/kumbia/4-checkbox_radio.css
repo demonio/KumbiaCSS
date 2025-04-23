@@ -1,0 +1,83 @@
+label:not([for*=tab]):has([type=checkbox], [type=radio]) {
+    align-items: baseline;
+    display: flex;
+}
+
+label:has(:is([type=checkbox], [type=radio]):not([disabled])),
+:is([type=checkbox], [type=radio]):not([disabled]) {
+    cursor: pointer;
+}
+
+label:has([disabled]),
+[disabled] {
+    cursor: not-allowed;
+}
+
+label:has(:is([type=checkbox], [type=radio]):disabled) {
+    color: var(--on-background);
+}
+
+label:has([type=checkbox], [type=radio]) {
+    gap: 8px;
+}
+
+[type=checkbox],
+[type=radio] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 17px;
+    position: relative;
+    width: 17px;
+    transition-duration: 0.3s;
+}
+
+[type=checkbox],
+[type=radio] {
+    border: 3px solid var(--color);
+}
+
+:is([type=checkbox], [type=radio]):disabled {
+    border: 3px solid var(--disabled-on-background);
+}
+
+[type=radio] {
+    border-radius: 20px;
+}
+
+[type=checkbox]:checked,
+[type=checkbox]:indeterminate {
+    background-position: center;
+}
+
+[type=radio]:checked:not(:disabled) {
+    background: radial-gradient(circle, var(--color) 4px, transparent 3px);
+}
+
+[type=radio]:checked:disabled {
+    background: radial-gradient(circle, var(--disabled-on-background) 4px, transparent 3px);
+}
+
+:is([type=checkbox]:checked, [type=checkbox]:indeterminate):not(:disabled) {
+    background-color: var(--color);
+}
+
+:is([type=checkbox]:checked, [type=checkbox]:indeterminate):disabled {
+    background-color: var(--disabled-on-background);
+}
+
+[data-theme="dark"] [type=checkbox]:checked {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="17" width="17" viewBox="0 -960 960 960"><path d="M382-208 122-468l90-90 170 170 366-366 90 90-456 456Z"/></svg>');
+}
+
+[data-theme="light"] input[type="checkbox"]:checked {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="17" width="17" viewBox="0 -960 960 960"><path fill="white" d="M382-208 122-468l90-90 170 170 366-366 90 90-456 456Z"/></svg>');
+}
+
+[data-theme="dark"] [type=checkbox]:indeterminate {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="17" width="17" viewBox="0 -960 960 960"><path d="M206-417v-126h548v126H206Z"/></svg>');
+}
+
+[data-theme="light"] input[type="checkbox"]:indeterminate {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="17" width="17" viewBox="0 -960 960 960"><path fill="white" d="M206-417v-126h548v126H206Z"/></svg>');
+}

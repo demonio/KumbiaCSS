@@ -1,0 +1,12 @@
+
+/* Use div or other tag/class only to position elements horizontally. */
+div {
+    align-items: start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}

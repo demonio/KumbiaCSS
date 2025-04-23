@@ -1,0 +1,12 @@
+:where(html) {
+    --box-shadow-color: 0 1px 3px 1px var(--color);
+    --box-shadow-complementary: 0 1px 3px 1px var(--complementary);
+    --box-shadow-on-background: 0 1px 3px 1px var(--on-background);
+    --screen-xxs: 360px;
+    --screen-xs: 576px;
+    --screen-s: 768px;
+    --screen-m: 992px;
+    --screen-l: 1280px;
+    --screen-xl: 1440px;
+    --screen-xxl: 1920px;
+}

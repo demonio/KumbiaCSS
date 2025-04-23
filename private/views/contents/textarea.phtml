@@ -1,0 +1,56 @@
+
+<h1>👉 <?=$title='Textarea'?></h1>
+
+<?php _code::start(); ?>
+<div>
+    <label>
+        <textarea name="fields[]"></textarea>
+    </label>
+    <label>
+        <textarea name="fields[]"></textarea>
+        <i>Helper text</i>
+    </label>
+    <label>
+        <span>Label</span>
+        <textarea name="fields[]" placeholder></textarea>
+    </label>
+</div>
+<div>
+    <label>
+        <span>Label</span>
+        <textarea name="fields[]" placeholder></textarea>
+        <i>Helper text</i>
+    </label>
+    <label>
+        <span>Label</span>
+        <textarea name="fields[]" placeholder aria-invalid="false"></textarea>
+        <i>Everything's fine!</i>
+    </label>
+    <label>
+        <span>Label</span>
+        <textarea name="fields[]" placeholder aria-invalid="true"></textarea>
+        <i>Error text</i>
+    </label>
+</div>
+<div>
+    <label>
+        <span>Label</span>
+        <img alt="md/search" loading="lazy" src="/img/icons/md/search.svg" width="18" height="18">
+        <textarea name="fields[]" placeholder></textarea>
+        <i>Helper text</i>
+    </label>
+    <label>
+        <span>Label</span>
+        <textarea name="fields[]" placeholder aria-invalid="false"></textarea>
+        <img alt="md/search" loading="lazy" src="/img/icons/md/search.svg" width="18" height="18">
+        <i>Everything's fine!</i>
+    </label>
+    <label>
+        <span>Label</span>
+        <img alt="md/search" loading="lazy" src="/img/icons/md/search.svg" width="18" height="18">
+        <textarea name="fields[]" placeholder aria-invalid="true"></textarea>
+        <img alt="md/search" loading="lazy" src="/img/icons/md/search.svg" width="18" height="18">
+        <i>Error text</i>
+    </label>
+</div>
+<?=_code::endWithResult('textarea')?>

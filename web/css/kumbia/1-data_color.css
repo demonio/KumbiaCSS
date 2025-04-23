@@ -1,0 +1,48 @@
+
+[data-color="red"] {
+    --color-hue: 0;
+}
+
+[data-color="orange"] {
+    --color-hue: 30;
+}
+
+[data-color="yellow"] {
+    --color-hue: 60;
+}
+
+[data-color="lime"] {
+    --color-hue: 90;
+}
+
+[data-color="green"] {
+    --color-hue: 120;
+}
+
+[data-color="jade"] {
+    --color-hue: 150;
+}
+
+[data-color="cyan"] {
+    --color-hue: 180;
+}
+
+[data-color="sky"] {
+    --color-hue: 210;
+}
+
+[data-color="blue"] {
+    --color-hue: 240;
+}
+
+[data-color="violet"] {
+    --color-hue: 270;
+}
+
+[data-color="magenta"] {
+    --color-hue: 300;
+}
+
+[data-color="rose"] {
+    --color-hue: 330;
+}

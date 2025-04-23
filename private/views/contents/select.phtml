@@ -1,0 +1,65 @@
+
+<h1>👉 <?=$title='select'?></h1>
+
+<?php _code::start(); ?>
+<div>
+    <label>
+        <select name="fields[]">
+            <option value="">Select one...</option>
+            <option value="item_1">Item 1</option>
+            <option value="item_2">Item 2</option>
+            <option value="item_3">Item 3</option>
+        </select>
+    </label>
+    <label>
+        <select name="fields[]">
+            <option value="">Select one...</option>
+            <option value="item_1">Item 1</option>
+            <option value="item_2">Item 2</option>
+            <option value="item_3">Item 3</option>
+        </select>
+        <i>Helper text</i>
+    </label>
+    <label>
+        <span>Label</span>
+        <select name="fields[]" placeholder="Necessary with label">
+            <option value="">Select one...</option>
+            <option value="item_1">Item 1</option>
+            <option value="item_2">Item 2</option>
+            <option value="item_3">Item 3</option>
+        </select>
+    </label>
+</div>
+<div>
+    <label>
+        <span>Label</span>
+        <select name="fields[]" placeholder>
+            <option value="">Select one...</option>
+            <option value="item_1">Item 1</option>
+            <option value="item_2">Item 2</option>
+            <option value="item_3">Item 3</option>
+        </select>
+        <i>Helper text</i>
+    </label>
+    <label>
+        <span>Label</span>
+        <select name="fields[]" placeholder aria-invalid="false">
+            <option value="">Select one...</option>
+            <option value="item_1">Item 1</option>
+            <option value="item_2">Item 2</option>
+            <option value="item_3">Item 3</option>
+        </select>
+        <i>Everything's fine!</i>
+    </label>
+    <label>
+        <span>Label</span>
+        <select name="fields[]" placeholder aria-invalid="true">
+            <option value="">Select one...</option>
+            <option value="item_1">Item 1</option>
+            <option value="item_2">Item 2</option>
+            <option value="item_3">Item 3</option>
+        </select>
+        <i>Error text</i>
+    </label>
+</div>
+<?=_code::endWithResult('select')?>

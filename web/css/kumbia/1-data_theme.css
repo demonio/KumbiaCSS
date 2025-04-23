@@ -1,0 +1,50 @@
+[data-theme] {
+    --color-sat: 100;
+}
+
+[data-theme=light] {
+    --color-lig: 20;
+    --complementary-left: hsl(calc(var(--color-hue) - 150) var(--color-sat) var(--color-lig));
+    --triad-left: hsl(calc(var(--color-hue) - 120) var(--color-sat) var(--color-lig));
+    --tetradic-left: hsl(calc(var(--color-hue) - 90) var(--color-sat) var(--color-lig));
+    --analogous-left: hsl(calc(var(--color-hue) - 30) var(--color-sat) var(--color-lig));
+    --color: hsl(var(--color-hue) var(--color-sat) var(--color-lig));
+    --analogous-right: hsl(calc(var(--color-hue) + 30) var(--color-sat) var(--color-lig));
+    --tetradic-right: hsl(calc(var(--color-hue) + 90) var(--color-sat) var(--color-lig));
+    --triad-right: hsl(calc(var(--color-hue) + 120) var(--color-sat) var(--color-lig));
+    --complementary-right: hsl(calc(var(--color-hue) + 150) var(--color-sat) var(--color-lig));
+    --complementary: hsl(calc(var(--color-hue) + 180) var(--color-sat) var(--color-lig));
+    --background: hsl(0 0 100);
+    --on-background: hsl(0 0 0);
+    --surface: hsl(0 0 87.5);
+    --hover-surface: hsl(0 0 97);
+    --on-surface: hsl(0 0 0);
+    --disabled-on-background: hsl(0 0 70);
+}
+
+[data-theme=dark] {
+    --color-lig: 80;
+    --complementary-left: hsl(calc(var(--color-hue) - 150) var(--color-sat) var(--color-lig));
+    --triad-left: hsl(calc(var(--color-hue) - 120) var(--color-sat) var(--color-lig));
+    --tetradic-left: hsl(calc(var(--color-hue) - 90) var(--color-sat) var(--color-lig));
+    --analogous-left: hsl(calc(var(--color-hue) - 30) var(--color-sat) var(--color-lig));
+    --color: hsl(var(--color-hue) var(--color-sat) var(--color-lig));
+    --analogous-right: hsl(calc(var(--color-hue) + 30) var(--color-sat) var(--color-lig));
+    --tetradic-right: hsl(calc(var(--color-hue) + 90) var(--color-sat) var(--color-lig));
+    --triad-right: hsl(calc(var(--color-hue) + 120) var(--color-sat) var(--color-lig));
+    --complementary-right: hsl(calc(var(--color-hue) + 150) var(--color-sat) var(--color-lig));
+    --complementary: hsl(calc(var(--color-hue) + 180) var(--color-sat) var(--color-lig));
+    --background: hsl(0 0 10);
+    --on-background: hsl(0 0 90);
+    --surface: hsl(0 0 15);
+    --hover-surface: hsl(0 0 13);
+    --on-surface: hsl(0 0 95);
+    --disabled-on-background: hsl(0 0 40);
+}
+
+:where(html) {
+    --invalid-color: #B00020;
+    --neutral-color: hsl(0 0 50);
+    --on-color: var(--background);
+    --valid-color: #00C853;
+}

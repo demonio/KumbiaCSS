@@ -1,0 +1,32 @@
+
+<h1>👉 <?=$title='Introduction'?></h1>
+
+<p>Let's go in parts, as Jack said...</p>
+<p><strong>Kumbia is</strong> a lively musical and dance genre originating in Colombia, with African and indigenous influences. Dancing is like playing, <strong>fun.</strong></p>
+<p><strong>CSS</strong> or "Cascading Style Sheets", <strong>is a design language</strong> used to stylize the presentation of HTML documents on the web. </p>
+<p>And now everything together: <strong>KumbiaCSS is</strong> a web development framework based on CSS, designed to facilitate the creation and styling of web pages <strong>efficiently.</strong> In short, read only the bold.</p>
+<p>Next, you will see everything you can do with KumbiaCSS and how to hack it to your liking.</p>
+
+<h2>Using the downloaded framework</h2>
+<p><a download href="/css/kumbia.min.css"><u>Download KumbiaCSS now</u></a> and link /css/kumbia.min.css in your template head.</p>
+<?php _code::start(); ?>
+<link href="/css/kumbia.min.css" rel="stylesheet">
+<?=_code::end('install-manually')['code']?>
+
+<h2>Example template</h2>
+<?php _code::start(); ?>
+<!DOCTYPE html>
+<html id="important" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link href="/css/kumbia.min.css" rel="stylesheet">
+        <title>Hello KumbiaCSS!</title>
+    </head>
+    <body>
+        <main>
+            <h1>Hello KumbiaCSS!</h1>
+        </main>
+    </body>
+</html>
+<?=_code::end('starter-html-template')['code']?>

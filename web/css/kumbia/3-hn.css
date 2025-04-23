@@ -1,0 +1,66 @@
+:where(html) {
+    --h1-color: var(--on-surface);
+    --h2-color: var(--on-surface);
+    --h3-color: var(--on-surface);
+    --h4-color: var(--on-surface);
+    --h5-color: var(--on-surface);
+    --h6-color: var(--on-surface);
+    --h1-font-family: "Arial";
+    --h2-font-family: "Verdana";
+    --h3-font-family: "Georgia";
+    --h4-font-family: "Courier New";
+    --h5-font-family: "Times New Roman";
+    --h6-font-family: "Tahoma";
+    --h1-font-size: 3.2rem;
+    --h2-font-size: 2.6rem;
+    --h3-font-size: 1.8rem;
+    --h4-font-size: 1.4rem;
+    --h5-font-size: 1.2rem;
+    --h6-font-size: 1.1rem;
+}
+
+h1 {
+    color: var(--h1-color);
+    font: var(--h1-font-size) var(--h1-font-family);
+}
+
+h2 {
+    color: var(--h2-color);
+    font: var(--h2-font-size) var(--h2-font-family);
+}
+
+h3 {
+    color: var(--h3-color);
+    font: var(--h3-font-size) var(--h3-font-family);
+}
+
+h4 {
+    color: var(--h4-color);
+    font: var(--h4-font-size) var(--h4-font-family);
+}
+
+h5 {
+    color: var(--h5-color);
+    font: var(--h5-font-size) var(--h5-font-family);
+}
+
+h6 {
+    color: var(--h6-color);
+    font: var(--h6-font-size) var(--h6-font-family);
+}
+
+
+/* Break words when there is enough space. */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    min-height: 0;
+    min-width: 0;
+    overflow-wrap: break-word;
+    padding: 0;
+}

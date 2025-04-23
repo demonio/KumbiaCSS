@@ -1,0 +1,32 @@
+
+<h1>👉 <?=$title='Tabs'?></h1>
+   
+<?php _code::start(); ?>
+<div>
+    <label for="tab-1">
+        <input type="radio" id="tab-1" name="tab" checked>  
+        <span>Tab <?=Ku::icon('md/looks_1')?></span>
+    </label>
+    <label for="tab-2">
+        <input type="radio" id="tab-2" name="tab">  
+        <span>Tab <?=Ku::icon('md/looks_2')?></span>
+    </label>
+    <label for="tab-3">
+        <input type="radio" id="tab-3" name="tab">  
+        <span>Tab <?=Ku::icon('md/looks_3')?></span>
+    </label>
+    <label for="tab-4">
+        <input type="radio" id="tab-4" name="tab">  
+        <span>Tab <?=Ku::icon('md/looks_4')?></span>
+    </label>
+    <label for="tab-5">
+        <input type="radio" id="tab-5" name="tab">  
+        <span>Tab <?=Ku::icon('md/looks_5')?></span>
+    </label>
+</div>
+<div>Container 1</div>
+<div>Container 2</div>
+<div>Container 3</div>
+<div>Container 4</div>
+<div>Container 5</div>
+<?=_code::endWithResult('tabs')?>

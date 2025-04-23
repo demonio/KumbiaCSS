@@ -1,0 +1,21 @@
+
+<h1>👉 <?=$title='Datalist'?></h1>
+
+<?php _code::start(); ?>
+<div>
+    <label>
+        <span>Choose a browser</span>
+        <input type="text" list="browsers" name="fields[]" placeholder>
+        <datalist id="browsers">
+            <option value="Brave">Brave</option>
+            <option value="Chrome">Chrome</option>
+            <option value="Edge">Edge</option>
+            <option value="Firefox">Firefox</option>
+            <option value="Opera">Opera</option>
+            <option value="Safari">Safari</option>
+            <option value="Tor">Tor</option>
+            <option value="Vivaldi">Vivaldi</option>
+        </datalist>
+    </label>
+</div>
+<?=_code::endWithResult('datalist')?>

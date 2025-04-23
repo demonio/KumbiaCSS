@@ -1,0 +1,113 @@
+:where(html) {
+    --button-border-radius: 20px;
+    --button-box-shadow: var(--box-shadow-color);
+    --button-font: 14px/20px var(--body-font-family);
+    --button-padding-block: 10px;
+    --button-padding-inline: 24px;
+}
+
+button:not([type]),
+[role="button"],
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	align-items: center;
+	background-color: transparent;
+	border-radius: var(--button-border-radius);
+	color: var(--on-background);
+	cursor: pointer;
+	display: inline-flex;
+    font: var(--button-font);
+	justify-content: center;
+	line-height: 18px;
+	margin: 5px;
+	min-height: 40px;
+	width: fit-content;
+}
+
+:is(button, [role="button"])[data-color]:not([disabled]) {
+	background-color: hsl(var(--color-hue) var(--color-sat) var(--color-lig));
+	color: var(--on-color);
+}
+
+:is(button:not([type]), [role="button"], [type="button"], [type="reset"], [type="submit"]):not(:has(img, svg)) {
+	padding-inline: var(--button-padding-inline);
+}
+
+:is(button:not([type]), [role="button"], [type="button"], [type="reset"], [type="submit"]):has(img, svg) {
+	gap: 8px;
+	padding-inline: 16px;
+}
+
+:is(button:not([type]), [role="button"], [type="button"], [type="reset"], [type="submit"])>:is(img, svg) {
+	width: 18px;
+	height: 18px;
+}
+
+button:not([type]),
+[role="button"],
+[type="submit"],
+[type="button"],
+[type="reset"] {
+	border: 1px solid transparent;
+	box-shadow: var(--button-box-shadow);
+}
+
+:is([role="button"], [type="button"], [type="reset"], [type="submit"]):active {
+	box-shadow: none;
+}
+
+:is(button:not([type]),
+	[role="button"],
+	[type="button"],
+	[type="reset"],
+	[type="submit"]):hover:not([disabled]) {
+	animation: nova 0.3s;
+}
+
+:is(button:not([type]),
+	[role="button"],
+	[type="button"],
+	[type="reset"],
+	[type="submit"])[disabled] {
+	border: 1px solid var(--disabled-on-background);
+	box-shadow: none;
+	color: var(--disabled-on-background);
+	cursor: not-allowed;
+}
+
+:is(div, footer):has(> :is(button, label:has(input:not([type="button"], [type="reset"], [type="submit"], [type="checkbox"], [type="file"], [type="radio"], [type="range"])), [role="button"]) + :is(button, label, [role="button"]) ) {
+	gap: 0;
+}
+
+:is(div, footer):has(> :is(button, label:has(input:not([type="button"], [type="reset"], [type="submit"], [type="checkbox"], [type="file"], [type="radio"], [type="range"])), [role="button"]) + :is(button, label, [role="button"]) )> :is(button, [role="button"]) {
+	border-radius: 0;
+	margin-inline: 0;
+}
+
+:is(div, footer):has(> :is(button, label:has(input:not([type="button"], [type="reset"], [type="submit"], [type="checkbox"], [type="file"], [type="radio"], [type="range"])), [role="button"]) + :is(button, label, [role="button"]) )> :is(button, [role="button"]):first-child {
+	border-radius: 20px 0 0 20px;
+	margin-inline: 4px 0;
+}
+
+:is(div, footer):has(> :is(button, label:has(input:not([type="button"], [type="reset"], [type="submit"], [type="checkbox"], [type="file"], [type="radio"], [type="range"])), [role="button"]) + label )>label>input {
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+	border-left: 0;
+}
+
+:is(div, footer):has(> label + :is(button, label:has(input:not([type="button"], [type="reset"], [type="submit"], [type="checkbox"], [type="file"], [type="radio"], [type="range"])), [role="button"]) )>label>input {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+	border-right: 0;
+}
+
+:is(div, footer):has(> :is(button, label:has(input:not([type="button"], [type="reset"], [type="submit"], [type="checkbox"], [type="file"], [type="radio"], [type="range"])), [role="button"]) + :is(button, label, [role="button"]) )> :is(button, [role="button"]):last-child {
+	border-radius: 0 20px 20px 0;
+	margin-inline: 0 4px;
+}
+
+footer:has(a, button),
+form div:has(button) {
+    justify-content: end;
+}
